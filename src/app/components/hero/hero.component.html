@@ -1,0 +1,121 @@
+<section id="home" class="hero">
+  <div class="hero-glow glow-1"></div>
+  <div class="hero-glow glow-2"></div>
+
+  <div class="container hero-inner">
+    <!-- LEFT CONTENT -->
+    <div class="hero-content">
+      <div class="hero-status">
+        <span class="status-dot"></span>
+        Available for opportunities
+      </div>
+
+      <p class="hero-greeting">Hello, I'm</p>
+
+      <h1 class="hero-name">
+        A. Manisha<br />
+        <span class="grad-text">Patro</span>
+      </h1>
+
+      <div class="hero-role">
+        <!-- <span class="role-prefix">// </span> -->
+        <!-- <span class="typed">{{ typed }}</span> -->
+        <span class="typed">Software Developer</span>
+        <!-- <span class="cursor">|</span> -->
+      </div>
+
+      <p class="hero-bio">
+        Software Developer with <strong>4+ years</strong> building secure,
+        scalable enterprise banking web applications. Expert in Angular, React,
+        TypeScript and RESTful APIs with a track record of
+        <strong>70% load time reduction</strong> and
+        <strong>80% fewer production defects</strong>.
+      </p>
+
+      <div class="hero-badges">
+        <span class="badge" *ngFor="let b of badges">
+          <i [class]="b.icon"></i>
+          <span>{{ b.label }}</span>
+        </span>
+      </div>
+
+      <div class="hero-actions">
+        <button class="btn-primary" (click)="scroll('projects')">
+          <i class="fas fa-briefcase"></i>
+          <span>View My Work</span>
+        </button>
+        <a
+          class="btn-outline"
+          (click)="scroll('contact')"
+          style="cursor: pointer"
+        >
+          <i class="fas fa-envelope"></i>
+          <span>Get In Touch</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- RIGHT VISUAL -->
+    <div class="hero-visual">
+      <!-- Photo wrapper — chips sit OUTSIDE the photo circle -->
+      <div class="photo-wrapper">
+        <!-- Chip top-left -->
+        <div class="chip chip-tl">
+          <div class="chip-icon"><i class="fas fa-clock"></i></div>
+          <div class="chip-text">
+            <strong>4+</strong>
+            <span>Years Exp</span>
+          </div>
+        </div>
+
+        <!-- Rotating rings -->
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+
+        <!-- Photo circle -->
+        <div class="photo-circle">
+          <img src="assets/images/manisha-photo.png" alt="A. Manisha Patro" />
+        </div>
+
+        <!-- Chip right -->
+        <div class="chip chip-tr">
+          <div class="chip-icon angular"><i class="fab fa-angular"></i></div>
+          <div class="chip-text">
+            <strong>Angular</strong>
+            <span>Expert</span>
+          </div>
+        </div>
+
+        <!-- Chip bottom-left -->
+        <div class="chip chip-bl">
+          <div class="chip-icon teal"><i class="fas fa-bolt"></i></div>
+          <div class="chip-text">
+            <strong>70%</strong>
+            <span>Load Boost</span>
+          </div>
+        </div>
+
+        <!-- Chip bottom-right -->
+        <div class="chip chip-br">
+          <div class="chip-icon blue"><i class="fas fa-users"></i></div>
+          <div class="chip-text">
+            <strong>7</strong>
+            <span>Devs Mentored</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats strip -->
+      <div class="hero-stats">
+        <div class="hstat" *ngFor="let s of stats">
+          <strong>{{ s.num }}</strong>
+          <span>{{ s.label }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="scroll-hint" (click)="scroll('about')">
+    <i class="fas fa-chevron-down"></i>
+  </button>
+</section>

@@ -1,0 +1,42 @@
+<nav class="navbar" [class.scrolled]="isScrolled">
+  <div class="nav-wrap">
+    <!-- Logo -->
+    <div class="nav-logo" (click)="go('home')">
+      <span class="lb">&lt;</span><span class="ln">MP</span
+      ><span class="lb">/&gt;</span>
+    </div>
+
+    <!-- Desktop links -->
+    <ul class="nav-links">
+      <li *ngFor="let l of links">
+        <a [class.active]="active === l.id" (click)="go(l.id)">{{ l.label }}</a>
+      </li>
+    </ul>
+
+    <!-- CTA -->
+    <a
+      class="nav-hire btn-primary"
+      (click)="go('contact')"
+      style="cursor: pointer"
+    >
+      <i class="fas fa-paper-plane"></i> Hire Me
+    </a>
+
+    <!-- Burger -->
+    <div class="burger" [class.open]="menuOpen" (click)="menuOpen = !menuOpen">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="mobile-nav" [class.open]="menuOpen">
+    <a *ngFor="let l of links" (click)="go(l.id)">{{ l.label }}</a>
+    <a
+      (click)="go('contact')"
+      style="cursor: pointer"
+      class="mobile-hire-plain"
+    >
+      <i class="fas fa-paper-plane"></i> Hire Me
+    </a>
+  </div>
+</nav>

@@ -1,0 +1,88 @@
+<section id="about" class="about-section">
+  <div class="container">
+    <div class="about-grid">
+      <!-- Left -->
+      <div class="about-left reveal-left">
+        <div class="about-card">
+          <div class="about-avatar">
+            <img
+              src="assets/images/manisha-photo.png"
+              alt="A. Manisha Patro"
+              class="about-photo"
+            />
+            <div class="avatar-glow"></div>
+          </div>
+          <div class="about-info-list">
+            <div class="info-row" *ngFor="let h of highlights">
+              <div class="info-icon">
+                <i [class]="h.icon" [class.green]="h['green']"></i>
+              </div>
+              <div>
+                <span class="info-label">{{ h.label }}</span>
+                <span class="info-value" [class.green-text]="h['green']">{{
+                  h.value
+                }}</span>
+              </div>
+            </div>
+          </div>
+          <a
+            href="assets/files/manisha_patro_cv.pdf"
+            download="Manisha_Patro_CV.pdf"
+            class="btn-primary"
+            style="width: 100%; justify-content: center; margin-top: 1.5rem"
+          >
+            <i class="fas fa-download"></i> Download CV
+          </a>
+        </div>
+      </div>
+
+      <!-- Right -->
+      <div class="about-right reveal-right">
+        <p class="sec-label">About Me</p>
+        <h2 class="sec-title">
+          Software Developer <span class="grad-text">Who Builds</span> Things
+          That Matter
+        </h2>
+
+        <p class="about-para">
+          I'm a passionate Software Developer with
+          <strong>4+ years of experience</strong> building secure, scalable web
+          applications for enterprise and banking domains. I specialize in
+          <strong>Angular (v10+)</strong>, React.js, TypeScript, and RESTful API
+          integration, with deep expertise in component-based architecture and
+          frontend performance optimization.
+        </p>
+
+        <p class="about-para">
+          Currently at
+          <strong>Rumango Software &amp; Consulting Services Pvt. Ltd.</strong>,
+          I lead end-to-end development of full-stack applications, mentor
+          junior developers, and drive architectural decisions that improve
+          system efficiency and code quality across the team.
+        </p>
+
+        <p class="about-para">
+          I actively leverage <strong>AI tools</strong> like GitHub Copilot,
+          ChatGPT and Cursor to accelerate development, write cleaner code,
+          debug faster and deliver higher quality solutions — staying ahead in a
+          fast-moving tech landscape.
+        </p>
+
+        <!-- Achievements grid -->
+        <div class="achievements-grid">
+          <div
+            class="achievement"
+            *ngFor="let a of achievements"
+            [class]="'ach-' + a.color"
+          >
+            <div class="ach-icon"><i [class]="a.icon"></i></div>
+            <div>
+              <strong>{{ a.value }}</strong>
+              <span>{{ a.label }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

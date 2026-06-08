@@ -1,0 +1,41 @@
+<section id="projects" class="projects-section">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <p class="sec-label">Portfolio</p>
+      <h2 class="sec-title">Key <span class="grad-text">Projects</span></h2>
+      <p class="sec-desc">Enterprise & banking solutions built with modern Angular, React and Node.js architecture.</p>
+    </div>
+
+    <div class="projects-grid">
+      <div class="project-card card reveal" *ngFor="let p of projects; let i = index"
+           [style.transition-delay]="(i * 0.12) + 's'" [class]="'pc-' + p.color">
+
+        <!-- Card header -->
+        <div class="pc-header">
+          <div class="pc-icon-wrap">
+            <i [class]="p.icon"></i>
+          </div>
+          <div>
+            <div class="pc-category">{{ p.category }}</div>
+            <h3 class="pc-name">{{ p.name }}</h3>
+          </div>
+        </div>
+
+        <p class="pc-summary">{{ p.summary }}</p>
+
+        <!-- Highlights -->
+        <ul class="pc-highlights">
+          <li *ngFor="let h of p.highlights">{{ h }}</li>
+        </ul>
+
+        <!-- Tags -->
+        <div class="pc-tags">
+          <span class="tech-tag" [class]="p.color" *ngFor="let t of p.tags">{{ t }}</span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>

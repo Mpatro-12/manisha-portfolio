@@ -1,0 +1,51 @@
+<section id="skills" class="skills-section">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <p class="sec-label">Technical Expertise</p>
+      <h2 class="sec-title">Skills & <span class="grad-text">Technologies</span></h2>
+      <p class="sec-desc">A comprehensive skillset spanning frontend, backend, architecture, cloud & DevOps.</p>
+    </div>
+
+    <!-- Skill Groups Grid -->
+    <div class="skills-groups">
+      <div class="skill-group reveal card" *ngFor="let g of skillGroups; let i = index"
+           [style.transition-delay]="(i * 0.1) + 's'" [class]="'sg-' + g.color">
+        <div class="sg-header">
+          <div class="sg-icon"><i [class]="g.icon"></i></div>
+          <h3 class="sg-title">{{ g.title }}</h3>
+        </div>
+        <div class="sg-bars">
+          <div class="sk-row" *ngFor="let s of g.skills">
+            <div class="sk-meta">
+              <span class="sk-name">{{ s.name }}</span>
+              <span class="sk-pct">{{ s.pct }}%</span>
+            </div>
+            <div class="sk-track">
+              <div class="sk-fill" #bar [attr.data-w]="s.pct"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Soft Skills -->
+    <div class="soft-skills reveal">
+      <h3 class="soft-title">Leadership & <span class="grad-text">Soft Skills</span></h3>
+      <div class="soft-grid">
+        <div class="soft-card" *ngFor="let s of softSkills">
+          <i [class]="s.icon"></i>
+          <span>{{ s.label }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Methodology strip -->
+    <div class="method-strip reveal">
+      <span class="tech-tag blue" *ngFor="let m of ['Agile','Scrum','Sprint Planning','CI/CD','Code Reviews','Peer Reviews','TDD','Delivery Tracking','Functional Design','Technical Design']">
+        {{ m }}
+      </span>
+    </div>
+
+  </div>
+</section>

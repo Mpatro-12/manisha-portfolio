@@ -1,0 +1,48 @@
+<section id="experience" class="exp-section">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <p class="sec-label">Work History</p>
+      <h2 class="sec-title">Professional <span class="grad-text">Experience</span></h2>
+      <p class="sec-desc">4+ years building enterprise & banking applications across multiple roles.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item reveal" *ngFor="let j of jobs; let i = index"
+           [style.transition-delay]="(i * 0.1) + 's'">
+
+        <!-- Connector -->
+        <div class="tl-connector">
+          <div class="tl-dot" [class.current]="j.current">
+            <i class="fas fa-code"></i>
+          </div>
+        </div>
+
+        <!-- Card -->
+        <div class="tl-card card">
+          <div class="tl-header">
+            <div class="tl-title-group">
+              <div class="tl-role">{{ j.title }}</div>
+              <div class="tl-company">
+                <i class="fas fa-building"></i> {{ j.company }}
+              </div>
+            </div>
+            <div class="tl-meta">
+              <span class="tl-period"><i class="fas fa-calendar-alt"></i> {{ j.period }}</span>
+              <span class="tl-type" [class.current-badge]="j.current">{{ j.type }}</span>
+            </div>
+          </div>
+
+          <ul class="tl-bullets">
+            <li *ngFor="let b of j.bullets">{{ b }}</li>
+          </ul>
+
+          <div class="tl-tags">
+            <span class="tech-tag" *ngFor="let t of j.tags">{{ t }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
