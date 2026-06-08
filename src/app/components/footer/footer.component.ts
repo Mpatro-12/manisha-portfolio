@@ -13,7 +13,7 @@ import { CommonModule } from "@angular/common";
         <div class="footer-grid">
           <div class="footer-brand">
             <div class="footer-logo">
-              <span class="lb">&lt;</span>AM<span class="lb">/&gt;</span>
+              <span class="lb">&lt;</span>PM<span class="lb">/&gt;</span>
             </div>
             <p>
               Software Developer specializing in Angular, React and enterprise
