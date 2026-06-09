@@ -28,6 +28,7 @@ export class AboutComponent {
       label: "AI Tools",
       value: "GitHub Copilot · ChatGPT · AI-Assisted Development",
     },
+    { icon: 'fab fa-js', label: 'Core Skills', value: 'JavaScript · TypeScript · Angular · React' },
     {
       icon: "fas fa-circle",
       label: "Status",
