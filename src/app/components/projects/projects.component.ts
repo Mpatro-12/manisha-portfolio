@@ -24,7 +24,7 @@ export class ProjectsComponent {
         'Managed real-time state using RxJS and Angular services',
         'Optimized UI/UX with Angular Material & responsive design'
       ],
-      tags: ['Angular', 'Angular JS', 'JWT Auth', 'RxJS', 'Angular Material', 'Lazy Loading', 'REST APIs']
+      tags: ['Angular', 'Angular JS', 'JWT Auth', 'RxJS', 'Angular Material', 'Lazy Loading', 'REST APIs', 'Javascript', 'Typescript']
     },
     {
       name: 'Median — Middleware Platform',
@@ -39,7 +39,7 @@ export class ProjectsComponent {
         'Implemented audit & monitoring features for transaction & interface tracking',
         'Fixed UAT and production issues under tight Agile deadlines'
       ],
-      tags: ['Angular', 'Reactive Forms', 'REST', 'SOAP', 'Agile', 'Audit & Monitoring']
+      tags: ['Angular', 'Reactive Forms', 'REST', 'SOAP', 'Agile', 'Audit & Monitoring', 'Javascript']
     },
     {
       name: 'ExpressBees — Logistics Platform',
@@ -54,7 +54,7 @@ export class ProjectsComponent {
         'Used Material-UI for consistent, responsive component library',
         'Implemented reusable React components for enhanced UX'
       ],
-      tags: ['React.js', 'Redux', 'Material-UI', 'REST APIs', 'Lazy Loading', 'Async JS']
+     tags: ['React.js', 'Redux', 'Material-UI', 'REST APIs', 'Lazy Loading', 'JavaScript']
     }
   ];
 }
