@@ -34,6 +34,7 @@ export class HeroComponent implements OnInit, OnDestroy {
     { icon: "fab fa-angular", label: "Angular v10+" },
     { icon: "fab fa-react", label: "React.js" },
     { icon: "fas fa-code", label: "TypeScript" },
+    { icon: 'fab fa-js',     label: 'JavaScript' },
     { icon: "fas fa-server", label: "Node.js" },
     { icon: "fab fa-aws", label: "AWS" },
     { icon: "fas fa-lock", label: "JWT / OAuth2" },
