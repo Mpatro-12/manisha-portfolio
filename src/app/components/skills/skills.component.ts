@@ -23,7 +23,8 @@ export class SkillsComponent implements AfterViewInit {
       icon: "fas fa-laptop-code",
       color: "teal",
       skills: [
-        { name: "Angular (v10+)", pct: 95 },
+        { name: "Angular (v10+)", pct: 90 },
+        { name: 'JavaScript (ES6+)',pct: 90 },
         { name: "TypeScript / ES6+", pct: 92 },
         { name: "React.js", pct: 82 },
         { name: "HTML5 / CSS3 / SCSS", pct: 95 },
